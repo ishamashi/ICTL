@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $("#konversi").click(function () {
         $("#konversi").addClass("active")
         $("#home").removeClass("active")
@@ -52,6 +51,11 @@ $(document).ready(function () {
         konversi()
     })
 
+    // $("#validationCustom02").change(function () {
+    //     nilai = $("#validationCustom02").val()
+    //     var nilai = data.result.toLocaleString('en-US')
+    // })
+
     list();
 })
 
@@ -69,7 +73,8 @@ function konversi() {
 		contentType: "application/json",
 		dataType: 'json',
 		success: function (data, textStatus, jqXHR) {
-            $("#validationCustom04").val(data.result);
+            var usFormat = data.result.toLocaleString('en-US')
+            $("#validationCustom04").val(usFormat);
             $('#spinner-div').hide();
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
@@ -101,6 +106,8 @@ function list() {
                 $('#body-list').append('<tr><td>'+i+'</td><td>'+v+'</td><td>'+k+'</td></tr>');
                 i++;
             })
+
+            $('#list-table').DataTable();
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
             console.log("ERROR", jqXHR.responseJSON.processStatus)
