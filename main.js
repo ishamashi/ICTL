@@ -4,10 +4,12 @@ $(document).ready(function () {
         $("#home").removeClass("active")
         $("#listm").removeClass("active")
         $("#valas").removeClass("active")
+        $("#news").removeClass("active")
 
         $("#page2").removeClass("d-none")
         $("#index").addClass("d-none")
         $("#page3").addClass("d-none")
+        $("#page4").addClass("d-none")
         $("#list").addClass("d-none")
     })
 
@@ -15,11 +17,13 @@ $(document).ready(function () {
         $("#home").addClass("active")
         $("#konversi").removeClass("active")
         $("#listm").removeClass("active")
+        $("#news").removeClass("active")
         $("#valas").removeClass("active")
 
         $("#index").removeClass("d-none")
         $("#page2").addClass("d-none")
         $("#page3").addClass("d-none")
+        $("#page4").addClass("d-none")
         $("#list").addClass("d-none")
     })
 
@@ -27,11 +31,13 @@ $(document).ready(function () {
         $("#listm").addClass("active")
         $("#home").removeClass("active")
         $("#konversi").removeClass("active")
+        $("#news").removeClass("active")
         $("#valas").removeClass("active")
 
         $("#list").removeClass("d-none")
         $("#page3").addClass("d-none")
         $("#page2").addClass("d-none")
+        $("#page4").addClass("d-none")
         $("#index").addClass("d-none")
     })
     
@@ -39,11 +45,27 @@ $(document).ready(function () {
         $("#valas").addClass("active")
         $("#home").removeClass("active")
         $("#listm").removeClass("active")
+        $("#news").removeClass("active")
         $("#konversi").removeClass("active")
 
         $("#page3").removeClass("d-none")
         $("#list").addClass("d-none")
         $("#page2").addClass("d-none")
+        $("#page4").addClass("d-none")
+        $("#index").addClass("d-none")
+    })
+
+    $("#news").click(function () {
+        $("#news").addClass("active")
+        $("#home").removeClass("active")
+        $("#listm").removeClass("active")
+        $("#valas").removeClass("active")
+        $("#konversi").removeClass("active")
+
+        $("#page4").removeClass("d-none")
+        $("#list").addClass("d-none")
+        $("#page2").addClass("d-none")
+        $("#page3").addClass("d-none")
         $("#index").addClass("d-none")
     })
 
